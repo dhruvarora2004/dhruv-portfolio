@@ -173,33 +173,26 @@ export interface About extends BasePageConfig {
   };
   /** Studies/education section */
    studies: {
-    /** Whether to display the studies section */
     display: boolean;
-    /** Title for the studies section */
     title: string;
-    /** List of educational institutions */
     institutions: Array<{
-      /** Institution name */
       name: string;
-      /** Description of studies */
-      description: React.ReactNode;
+      degree: string;
+      board?: string;
+      timeframe: string;
+      score: string;
+      achievements?: React.ReactNode[];
     }>;
+  
   };
   /** Certifications section */
   certifications: {
-    /** Whether to display the certifications section */
     display: boolean;
-    /** Title for the certifications section */
     title: string;
-    /** List of certifications */
     items: Array<{
-      /** Certification name */
       name: string;
-      /** Issuing organization */
       issuer: string;
-      /** What was learned / covered */
-      description: React.ReactNode;
-      /** Status, e.g. "Completed" or "In Progress" */
+      points: string[];
       status?: string;
     }>;
   };

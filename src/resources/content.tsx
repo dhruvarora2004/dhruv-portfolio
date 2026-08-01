@@ -83,7 +83,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -133,24 +133,28 @@ const about: About = {
   institutions: [
     {
       name: "Hansraj College, University of Delhi",
-      description: (
-        <>
-          B.Sc. (Hons.) Mathematics, Minor in Computer Science — CGPA
-          8.34 (2022-2026). Coursework in Field Theory, Galois Theory,
-          Integral Equations, and Calculus of Variations built strong
-          analytical and abstract problem-solving foundations, applied
-          directly to computer science coursework in algorithms and
-          computational thinking.
-        </>
-      ),
+      degree: "B.Sc. (Hons.) Mathematics, Minor in Computer Science",
+      board: "University of Delhi",
+      timeframe: "2022 - 2026",
+      score: "CGPA 8.34",
+      achievements: [
+        <>Ranked in the top 5 of the cohort with a 9.18 SGPA in the 4th semester</>,
+        <>Coursework in Field Theory, Galois Theory, Integral Equations, and Calculus of Variations, building strong analytical and abstract problem solving skills applied directly to computer science coursework in algorithms and computational thinking</>,
+      ],
     },
     {
-      name: "Bal Bharati Public School — Class XII (CBSE)",
-      description: <>92.2% (2021-2022)</>,
+      name: "Bal Bharati Public School",
+      degree: "Class XII",
+      board: "CBSE",
+      timeframe: "2021 - 2022",
+      score: "92.2%",
     },
     {
-      name: "Bal Bharati Public School — Class X (CBSE)",
-      description: <>85.8% (2020)</>,
+      name: "Bal Bharati Public School",
+      degree: "Class X",
+      board: "CBSE",
+      timeframe: "2020",
+      score: "85.8%",
     },
   ],
 },
@@ -162,75 +166,54 @@ certifications: {
       name: "Prime: AI/ML Job Preparation Program",
       issuer: "Apna College",
       status: "Completed",
-      description: (
-        <>
-          End-to-end ML/DL/GenAI curriculum — supervised and
-          unsupervised ML algorithms (Linear/Logistic Regression, Naive
-          Bayes, KNN, Decision Trees, K-Means, PCA), deep learning
-          architectures (FNN, RNN, LSTM, CNN, Transformers) in
-          TensorFlow/PyTorch/Keras, and applied GenAI (LLMs, NLP, RAG,
-          Agentic AI) — the direct foundation for the retrieval and
-          routing architecture used in Retail Analytics Copilot.
-        </>
-      ),
+      points: [
+        "Covered supervised and unsupervised ML algorithms including Linear/Logistic Regression, Naive Bayes, KNN, Decision Trees, K-Means, and PCA",
+        "Covered deep learning architectures (FNN, RNN, LSTM, CNN, Transformers) using TensorFlow, PyTorch, and Keras",
+        "Covered applied GenAI including LLMs, NLP, RAG, and Agentic AI",
+        "Formed the direct foundation for the retrieval and routing architecture used in Retail Analytics Copilot",
+      ],
     },
     {
       name: "Forward Program",
       issuer: "McKinsey & Company (McKinsey.org)",
       status: "Completed",
-      description: (
-        <>
-          A 10-week global program in structured problem-solving
-          (issue trees, prioritization frameworks), adaptability and
-          resilience, effective communication, and digital and AI
-          essentials — workplace fundamentals rather than a technical
-          credential.
-        </>
-      ),
+      points: [
+        "A 10 week global program in structured problem solving using issue trees and prioritization frameworks",
+        "Built adaptability and resilience skills for changing work environments",
+        "Developed effective communication and digital and AI essentials",
+      ],
     },
     {
       name: "Data Analytics and Visualization with MS Power BI",
       issuer: "IIM Bangalore, via Swayam",
       status: "Completed",
-      description: (
-        <>
-          Data cleaning and transformation, dashboard design, DAX for
-          calculated measures, data modeling, and Power BI Service for
-          publishing and collaboration — applied directly in the Sales
-          Performance Analytics Dashboard project.
-        </>
-      ),
+      points: [
+        "Covered data cleaning and transformation techniques",
+        "Covered dashboard design and DAX for calculated measures",
+        "Covered data modeling and Power BI Service for publishing and collaboration",
+        "Applied directly in the Sales Performance Analytics Dashboard project",
+      ],
     },
     {
       name: "Data Analytics with Python",
       issuer: "IIT Roorkee (NPTEL), via Swayam",
       status: "Completed",
-      description: (
-        <>
-          Statistical foundations for analytics — probability,
-          hypothesis testing, linear/logistic/multiple regression, and
-          clustering — implemented hands-on in Python with pandas and
-          NumPy.
-        </>
-      ),
+      points: [
+        "Covered statistical foundations including probability and hypothesis testing",
+        "Covered linear, logistic, and multiple regression",
+        "Covered clustering techniques",
+        "Implemented hands on in Python using pandas and NumPy",
+      ],
     },
     {
       name: "Microsoft Certified: DP-600, DP-700, DP-800",
       issuer: "Microsoft",
-      status: "In Progress — target August 2026",
-      description: (
-        <>
-          DP-600 (Fabric Analytics Engineer Associate): data ingestion,
-          semantic modeling, and DAX/SQL/KQL-based analytics in
-          Microsoft Fabric. <br />
-          DP-700 (Fabric Data Engineer Associate): data engineering at
-          scale — pipeline orchestration and Spark/SQL/KQL
-          transformations. <br />
-          DP-800 (Implementing an SQL-based AI Developer Solution):
-          embedding AI capabilities — vectors, embeddings, model
-          integration — into SQL Server and Azure SQL applications.
-        </>
-      ),
+      status: "In Progress, target August 2026",
+      points: [
+        "DP-600 (Fabric Analytics Engineer Associate): data ingestion, semantic modeling, and DAX/SQL/KQL based analytics in Microsoft Fabric",
+        "DP-700 (Fabric Data Engineer Associate): data engineering at scale including pipeline orchestration and Spark/SQL/KQL transformations",
+        "DP-800 (Implementing an SQL based AI Developer Solution): embedding AI capabilities such as vectors, embeddings, and model integration into SQL Server and Azure SQL applications",
+      ],
     },
   ],
 },
