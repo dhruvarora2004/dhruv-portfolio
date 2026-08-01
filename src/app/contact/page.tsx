@@ -53,6 +53,13 @@ export default function Contact() {
                 </React.Fragment>
               ),
           )}
+        <Button
+          href="tel:+919654628996"
+          label="+91 96546 28996"
+          size="m"
+          weight="default"
+          variant="secondary"
+        />
       </Row>
     </Column>
   );
