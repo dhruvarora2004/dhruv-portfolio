@@ -2,49 +2,34 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Dhruv",
+  lastName: "Arora",
+  name: `Dhruv Arora`,
+  role: "AI/ML Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-  locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
+  email: "2004dhruvarora@gmail.com",
+  location: "Asia/Kolkata",
+  languages: ["English", "Hindi"],
+  locale: "en",
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/dhruvarora2004",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/dhruvaroura",
     essential: true,
   },
   {
@@ -61,26 +46,28 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building applied ML systems that ship</>,
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
-  subline: (
-    <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-    </>
+  display: true,
+  title: (
+    <Row gap="12" vertical="center">
+      <strong className="ml-4">Retail Analytics Copilot</strong>{" "}
+      <Line background="brand-alpha-strong" vert height="20" />
+      <Text marginRight="4" onBackground="brand-medium">
+        Featured work
+      </Text>
+    </Row>
   ),
+  href: "/work/retail-analytics-copilot",
+},
+  subline: (
+  <>
+    I'm {person.firstName}, an {person.role.toLowerCase()} focused on{" "}
+    <Text as="span" size="xl" weight="strong">retrieval systems and applied ML</Text>.
+    I build data pipelines and AI systems end-to-end, from raw data to
+    deployed product. <br /> Based in Delhi NCR, open to relocation.
+  </>
+),
 };
 
 const about: About = {
@@ -100,138 +87,104 @@ const about: About = {
     link: "https://cal.com",
   },
   intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
-    ),
-  },
+  display: true,
+  title: "Introduction",
+  description: (
+    <>
+      {person.firstName} is a Delhi NCR-based {person.role.toLowerCase()}
+      with a background in Mathematics, focused on building applied
+      machine learning and retrieval-augmented systems. His work spans
+      classical ML pipelines, hybrid SQL+RAG architectures, and
+      end-to-end deployment — grounded in a strong mathematical and
+      statistical foundation.
+    </>
+  ),
+},
+
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
-    ],
-  },
+  display: true,
+  title: "Experience",
+  experiences: [
+    {
+      company: "Self-employed (Home Tuition)",
+      timeframe: "2022 - 2025",
+      role: "Mathematics Tutor",
+      achievements: [
+        <>
+          Delivered personalized coaching to 10-25 students at a time,
+          breaking down complex mathematical concepts into structured,
+          learnable steps.
+        </>,
+        <>
+          Tracked individual student performance over time to identify
+          learning gaps and adapt teaching strategy accordingly — the
+          same diagnostic, iterative approach now applied to model
+          evaluation and debugging.
+        </>,
+      ],
+      images: [],
+    },
+  ],
+},
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
-  },
+  display: true,
+  title: "Education",
+  institutions: [
+    {
+      name: "Hansraj College, University of Delhi",
+      description: <>B.Sc. (Hons.) Mathematics, Minor in Computer Science — CGPA 8.34 (2022-2026)</>,
+    },
+    {
+      name: "Certifications",
+      description: (
+        <>
+          DP-800: Microsoft Certified Implementing an SQL-based AI
+          Developer Solution (in progress) · Data Analytics and
+          Visualization with MS Power BI, IIM Bangalore (via Swayam) ·
+          Data Analytics with Python, NPTEL (via Swayam)
+        </>
+      ),
+    },
+  ],
+},
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
+  display: true,
+  title: "Technical Skills",
+  skills: [
+    {
+      title: "Machine Learning & Deep Learning",
+      description: (
+        <>Classical ML (Logistic Regression, KNN, Naive Bayes, XGBoost, SVM, K-Means) and deep learning in PyTorch (FNNs, CNNs, RNNs), with hyperparameter tuning via GridSearchCV.</>
+      ),
+      tags: [{ name: "Python", icon: "javascript" }],
+      images: [],
+    },
+    {
+      title: "Data & Retrieval Systems",
+      description: (
+        <>SQL-based structured querying, vector retrieval with ChromaDB and sentence-transformer embeddings, and hybrid routing between SQL and RAG.</>
+      ),
+      tags: [],
+      images: [],
+    },
+    {
+      title: "Data Analytics & Visualization",
+      description: (
+        <>Power BI and Excel dashboards with star-schema data modeling, pivot tables, and statistical analysis (regression, binomial/Poisson/normal distributions).</>
+      ),
+      tags: [],
+      images: [],
+    },
+    {
+      title: "Deployment & Tooling",
+      description: (
+        <>Streamlit Cloud deployment, multi-provider LLM integration, and evaluation-harness design for measuring answer correctness and retrieval accuracy.</>
+      ),
+      tags: [],
+      images: [],
+    },
+  ],
+},
 };
 
 const blog: Blog = {
@@ -245,11 +198,9 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `ML, data science, and AI engineering projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
