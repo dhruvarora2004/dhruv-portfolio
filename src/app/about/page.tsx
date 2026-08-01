@@ -98,11 +98,12 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
+            <Avatar
+              src={person.avatar}
+              size="xl"
+              style={{ flexShrink: 0 }}
+            />
             
-            <Row gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
-            </Row>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((language, index) => (
@@ -193,10 +194,21 @@ export default function About() {
                             icon={item.icon}
                             variant="secondary"
                           />
+                          
                         </Row>
                       </React.Fragment>
                     ),
                 )}
+                <Row s={{ hide: true }}>
+                  <Button
+                href="tel:+919654628996"
+                prefixIcon="phone"
+                label="+91 96546 28996"
+                size="s"
+                weight="default"
+                variant="secondary"
+              />
+                </Row>
               </Row>
             )}
           </Column>

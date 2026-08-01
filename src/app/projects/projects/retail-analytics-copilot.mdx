@@ -1,0 +1,95 @@
+---
+title: "Retail Analytics Copilot"
+publishedAt: "2026-07-15"
+summary: "A hybrid SQL+RAG system over 200K retail sales records, with a rule-based router and a 16-question eval harness scoring 92.3% answer correctness."
+images:
+  - "/images/projects/retail-analytics-copilot/cover.jpg"
+---
+
+## Overview
+
+Retail Analytics Copilot is a hybrid question-answering system over a
+200,000-row retail sales dataset. It routes each user question to
+either structured SQL, narrative RAG retrieval, or both — then answers
+using the results. Achieved 92.3% answer correctness, 100% retrieval
+accuracy, and 100% routing accuracy on a 16-question evaluation harness.
+
+## Problem Statement
+
+## Problem Statement
+
+Retail teams need to ask both direct, single-metric questions and
+broader analytical ones against the same dataset. For example, "What
+revenue and profit did the Electronics category generate?" is a
+direct lookup answerable from a single row of aggregated data. "Give
+a general overview of how the business is performing across all four
+regions" is different: it requires pulling multiple regional totals,
+summing them, and computing a derived metric like profit margin that
+does not exist as a column in the data. A single query interface needs
+to recognize which type of question it is dealing with and route
+accordingly, rather than forcing the user to know in advance whether
+they need a quick lookup or a multi-step calculation.
+
+## Dataset
+
+A 200,000-row retail sales dataset combining structured transactional
+fields with narrative/text fields, used both for SQL aggregation and
+for semantic retrieval.
+
+## Architecture
+
+- SQLite for structured, aggregate queries (totals, trends, comparisons)
+- ChromaDB + local sentence-transformer embeddings for narrative
+  retrieval (open-ended, explanatory questions)
+- A rule-based router with an LLM fallback decides whether a question
+  needs SQL, RAG, or both
+- Multi-provider LLM configuration (Groq / OpenAI / Ollama / OmniRoute)
+  via environment variables, so the system isn't locked to one provider
+
+## Tech Stack
+
+Python, SQLite, ChromaDB, sentence-transformers, Streamlit, multi-
+provider LLM routing (Groq, OpenAI, Ollama, OmniRoute)
+
+## Methodology
+
+Rather than sending every question to an LLM to decide routing (slow,
+non-deterministic, costly), a rule-based router handles the common
+cases directly and only falls back to an LLM for ambiguous questions.
+This kept routing accuracy at 100% on the eval set while cutting
+latency and cost.
+
+## Evaluation
+
+Built a 16-question evaluation harness scoring three dimensions
+independently: answer correctness, retrieval accuracy, and routing
+accuracy. Final results: 92.3% answer correctness, 100% retrieval
+accuracy, 100% routing accuracy.
+
+## Challenges & Debugging
+
+- A whitespace inconsistency in column names silently broke SQL
+  queries — traced and fixed by normalizing column names at load time.
+- Early versions gave hedged, non-committal answers because the SQL
+  context wasn't being passed into the final LLM prompt — fixed by
+  explicitly injecting retrieved SQL results into the answer-generation
+  step.
+- Found a gap in the router's keyword matching that misrouted a class
+  of comparison questions — fixed by expanding the rule set and
+  re-running the eval harness to confirm no regression.
+
+## Lessons Learned
+
+Evaluation harnesses catch regressions that manual spot-checking
+misses — the router keyword gap only surfaced because every change was
+re-scored against the same 16 questions.
+
+## Future Improvements
+
+Extending the router with tool-calling and LangGraph to support
+multi-step agentic queries rather than single-shot routing.
+
+## Links
+
+- [GitHub](https://github.com/dhruvarora2004/retail-analytics-copilot)
+- [Live demo](https://retail-analytics-copilot.streamlit.app/)

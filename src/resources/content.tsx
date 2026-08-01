@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Arora",
   name: `Dhruv Arora`,
   role: "AI/ML Engineer",
-  avatar: "/images/avatar1.jpg",
+  avatar: "/images/avatar2.jpg",
   email: "2004dhruvarora@gmail.com",
   location: "Asia/Kolkata",
   languages: ["English", "Hindi"],
@@ -58,14 +58,14 @@ const home: Home = {
       </Text>
     </Row>
   ),
-  href: "/work/retail-analytics-copilot",
+  href: "/projects/retail-analytics-copilot",
 },
   subline: (
   <>
-    I'm {person.firstName}, an {person.role.toLowerCase()} focused on{" "}
+    Hi, I am {person.firstName} {person.lastName}, an {person.role} focused on{" "}
     <Text as="span" size="xl" weight="strong">retrieval systems and applied ML</Text>.
-    I build data pipelines and AI systems end-to-end, from raw data to
-    deployed product. <br /> Based in Delhi NCR, open to relocation.
+    I have build data pipelines and AI systems end-to-end, from raw data to
+    deployed product.<br /> <br /> Based in Delhi NCR, open to relocation.
   </>
 ),
 };
@@ -91,11 +91,11 @@ const about: About = {
   title: "Introduction",
   description: (
     <>
-      {person.firstName} is a Delhi NCR-based {person.role.toLowerCase()}
-      with a background in Mathematics, focused on building applied
-      machine learning and retrieval-augmented systems. His work spans
+      I am a Delhi NCR-based {person.role.toLowerCase()}
+       with a background in Mathematics, focused on building applied
+      machine learning and retrieval augmented systems. My work spans
       classical ML pipelines, hybrid SQL+RAG architectures, and
-      end-to-end deployment — grounded in a strong mathematical and
+      end-to-end deployment that are grounded in a strong mathematical and
       statistical foundation.
     </>
   ),
@@ -139,7 +139,7 @@ const about: About = {
       score: "CGPA 8.34",
       achievements: [
         <>Ranked in the top 5 of the cohort with a 9.18 SGPA in the 4th semester</>,
-        <>Coursework in Field Theory, Galois Theory, Integral Equations, and Calculus of Variations, building strong analytical and abstract problem solving skills applied directly to computer science coursework in algorithms and computational thinking</>,
+        <>Completed coursework in advanced mathematics, strengthening analytical thinking, logical reasoning, and problem-solving skills applicable to computer science and data-driven domains.</>,
       ],
     },
     {
@@ -153,7 +153,7 @@ const about: About = {
       name: "Bal Bharati Public School",
       degree: "Class X",
       board: "CBSE",
-      timeframe: "2020",
+      timeframe: "2019 - 2020",
       score: "85.8%",
     },
   ],
@@ -281,7 +281,7 @@ const blog: Blog = {
 };
 
 const work: Work = {
-  path: "/work",
+  path: "/projects",
   label: "Projects",
   title: `Projects – ${person.name}`,
   description: `ML, data science, and AI engineering projects by ${person.name}`,

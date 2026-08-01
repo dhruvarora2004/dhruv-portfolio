@@ -1,0 +1,60 @@
+---
+title: "Sales Performance Analytics Dashboard"
+publishedAt: "2026-03-15"
+summary: "A 200K-record retail sales dashboard with a star-schema data model, built end-to-end in Python, Excel, and Power BI."
+images:
+  - "/images/projects/sales-performance-dashboard/cover.jpg"
+---
+
+## Overview
+
+An independently built retail sales analytics dashboard covering
+200,000 records, using a star-schema data model for efficient
+querying and Power BI for interactive reporting.
+
+## Problem Statement
+
+Raw transactional retail data isn't directly usable for business
+decision-making — it needs to be cleaned, modeled, and shaped into a
+schema that supports fast, flexible reporting across dimensions like
+time, region, and product category.
+
+## Dataset
+
+A 200,000-record retail sales dataset with transactional-level detail
+across products, regions, and time periods.
+
+## Architecture
+
+Data was structured as a single consolidated table combining
+transactional fields (region, category, state, month, revenue,
+profit, and order count) rather than a multi-table relational model.
+For the reporting granularity this dashboard needed, a single table
+kept the Power BI data model simple and queries fast for slicing by
+region, category, and time period.
+
+## Tech Stack
+
+Python (data cleaning and preparation), Excel (intermediate
+transformation and validation), Power BI (data modeling with DAX,
+dashboard design, and publishing)
+
+## Methodology
+
+Data was cleaned and validated in Python and Excel before being loaded
+into Power BI, where the star schema was built and DAX measures were
+used to calculate key business metrics (revenue trends, regional
+performance, category breakdowns).
+
+## Results
+
+Delivered an interactive dashboard supporting drill-down analysis
+across region, product category, and time period, with key metrics
+surfaced through DAX-calculated measures.
+
+## Tech Stack
+
+Python (data cleaning and preparation), Excel (intermediate
+transformation and validation), Power BI (DAX measures, dashboard
+design, and publishing)
+
