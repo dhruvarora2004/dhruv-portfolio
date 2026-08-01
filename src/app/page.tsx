@@ -43,6 +43,10 @@ export default function Home() {
         }}
       />
       <Column fillWidth horizontal="center" gap="m">
+        <Row fillWidth horizontal="center" vertical="center" gap="xl" s={{ direction: "column" }}>
+          <RevealFx translateY="8" delay={0.3}>
+          <Avatar src={person.avatar} size={28} style={{ flexShrink: 0 }} />
+        </RevealFx>
         <Column maxWidth="s" horizontal="center" align="center">
           {home.featured.display && (
             <RevealFx
@@ -111,6 +115,8 @@ export default function Home() {
             </Row>
           </RevealFx>
         </Column>
+        
+        </Row>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
