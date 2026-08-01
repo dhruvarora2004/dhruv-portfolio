@@ -45,6 +45,11 @@ export default function About() {
       items: about.studies.institutions.map((institution) => institution.name),
     },
     {
+      title: about.certifications.title,
+      display: about.certifications.display,
+      items: about.certifications.items.map((item) => item.name),
+    },
+    {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
@@ -275,6 +280,34 @@ export default function About() {
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.certifications.display && (
+            <>
+              <Heading as="h2" id={about.certifications.title} variant="display-strong-s" marginBottom="m">
+                {about.certifications.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.certifications.items.map((item, index) => (
+                  <Column key={`${item.name}-${index}`} fillWidth gap="4">
+                    <Row fillWidth horizontal="between" vertical="start" wrap>
+                      <Text id={item.name} variant="heading-strong-l">
+                        {item.name}
+                      </Text>
+                      {item.status && (
+                        <Text variant="label-default-s" onBackground="brand-weak">
+                          {item.status}
+                        </Text>
+                      )}
+                    </Row>
+                    <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="4">
+                      {item.issuer}
+                    </Text>
+                    <Text variant="body-default-m">{item.description}</Text>
                   </Column>
                 ))}
               </Column>
