@@ -240,34 +240,48 @@ certifications: {
   skills: [
     {
       title: "Machine Learning & Deep Learning",
-      description: (
-        <>Classical ML (Logistic Regression, KNN, Naive Bayes, XGBoost, SVM, K-Means) and deep learning in PyTorch (FNNs, CNNs, RNNs), with hyperparameter tuning via GridSearchCV.</>
-      ),
-      tags: [{ name: "Python", icon: "javascript" }],
+      tags: [
+        { name: "Python" },
+        { name: "Scikit-learn" },
+        { name: "PyTorch" },
+        { name: "XGBoost" },
+        { name: "Pandas" },
+        { name: "NumPy" },
+      ],
       images: [],
     },
     {
       title: "Data & Retrieval Systems",
-      description: (
-        <>SQL-based structured querying, vector retrieval with ChromaDB and sentence-transformer embeddings, and hybrid routing between SQL and RAG.</>
-      ),
-      tags: [],
+      tags: [
+        { name: "SQL" },
+        { name: "ChromaDB" },
+        { name: "Sentence-Transformers" },
+        { name: "LangChain" },
+        { name: "RAG Pipelines" },
+        { name: "Vector Embeddings" },
+      ],
       images: [],
     },
     {
       title: "Data Analytics & Visualization",
-      description: (
-        <>Power BI and Excel dashboards with star-schema data modeling, pivot tables, and statistical analysis (regression, binomial/Poisson/normal distributions).</>
-      ),
-      tags: [],
+      tags: [
+        { name: "Power BI" },
+        { name: "Advanced Excel" },
+        { name: "DAX" },
+        { name: "Pivot Tables" },
+        { name: "Statistical Analysis" },
+      ],
       images: [],
     },
     {
       title: "Deployment & Tooling",
-      description: (
-        <>Streamlit Cloud deployment, multi-provider LLM integration, and evaluation-harness design for measuring answer correctness and retrieval accuracy.</>
-      ),
-      tags: [],
+      tags: [
+        { name: "Streamlit" },
+        { name: "Git & GitHub" },
+        { name: "Groq" },
+        { name: "OpenAI API" },
+        { name: "Prompt Engineering" },
+      ],
       images: [],
     },
   ],
