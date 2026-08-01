@@ -1,0 +1,49 @@
+---
+title: "Student Exam Performance Analyzer"
+publishedAt: "2026-02-20"
+summary: "Benchmarked 7 regression models on a 6,607-record dataset to predict exam performance, reaching R^2 ~ 0.77."
+images:
+  - "/images/projects/student-performance/cover.jpg"
+---
+
+## Overview
+
+A regression benchmarking project predicting student exam performance
+across 7 different models on a 6,607-record dataset, reaching R^2 ~
+0.77 on the best-performing model.
+
+## Dataset
+
+6,607-record dataset of student performance factors.
+
+## Methodology
+
+Benchmarked 7 regression models under identical preprocessing to
+compare performance rather than committing to a single algorithm
+upfront.
+
+## Results
+
+Best model reached R^2 ~ 0.77.
+
+## Challenges & Debugging
+
+Found and fixed an ordinal-encoding label inversion bug — some ordinal
+categories were being encoded in reverse order, silently degrading
+model performance. Fixed by manually mapping category order instead of
+relying on default encoder ordering.
+
+## Lessons Learned
+
+Default library behavior (like automatic ordinal encoding order) should
+be verified against the actual intended category order, not assumed —
+this bug was invisible in the code and only caught by checking encoded
+values against the source data.
+
+## Tech Stack
+
+Python, scikit-learn, pandas
+
+## Links
+
+- GitHub: https://github.com/dhruvarora2004/student-performance-analysis
