@@ -166,6 +166,44 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              {routes["/resume"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="document"
+                      href="/resume"
+                      label="Resume"
+                      selected={pathname.startsWith("/resume")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="document"
+                      href="/resume"
+                      selected={pathname.startsWith("/resume")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/contact"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="email"
+                      href="/contact"
+                      label="Contact"
+                      selected={pathname.startsWith("/contact")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="email"
+                      href="/contact"
+                      selected={pathname.startsWith("/contact")}
+                    />
+                  </Row>
+                </>
+              )}
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
